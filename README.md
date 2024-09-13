@@ -57,13 +57,13 @@ We're using `create_pandas_dataframe_agent` from LangChain. An agent is a softwa
              An agent that can access and use the LLM.
          """
 
-         # Create an OpenAI object.
+         
          llm = OpenAI(openai_api_key=API_KEY)
 
-         # Read the CSV file into a Pandas DataFrame.
+         
          df = pd.read_csv(filename)
 
-         # Create a Pandas DataFrame agent.
+         
          return create_pandas_dataframe_agent(llm, df, verbose=False)
      ```
 
@@ -116,10 +116,10 @@ We're using `create_pandas_dataframe_agent` from LangChain. An agent is a softwa
              + query
          )
 
-         # Run the prompt through the agent.
+         
          response = agent.run(prompt)
 
-         # Convert the response to a string.
+         # now we will convert the response to a string.
          return response.__str__()
      ```
 
@@ -189,7 +189,7 @@ def write_response(response_dict: dict):
 ### Create Streamlit Interface
 
 ```python
-st.title("👨‍💻 Chat with your CSV")
+st.title(" Chat with your CSV")
 
 st.write("Please upload your CSV file below.")
 
@@ -227,5 +227,5 @@ if st.button("Submit Query", type="primary"):
    - **Streamlit**: Provides a user interface for file upload and query submission. It processes the agent's response and displays results in the form of text, tables, or charts.
 
 
-
+I opted for the LangChain framework in this solution, using the concept of the LLM absorbing user prompt and csv file data, which it then sens to a code interpretor that generates code for said task. This can include lets say plot generation between 2 collumns or even a simple response to show first five rows.
 ---
