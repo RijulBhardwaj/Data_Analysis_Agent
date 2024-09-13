@@ -33,7 +33,7 @@ def create_agent(filename: str):
    
 
     # Create a Pandas DataFrame agent.
-    return create_pandas_dataframe_agent(llm, df, verbose=False)
+    return create_pandas_dataframe_agent(llm, df, verbose=False, allow_dangerous_code=True)
 
 def query_agent(agent, query):
     """
