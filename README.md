@@ -226,6 +226,6 @@ if st.button("Submit Query", type="primary"):
 4. **Interface Setup**:
    - **Streamlit**: Provides a user interface for file upload and query submission. It processes the agent's response and displays results in the form of text, tables, or charts.
 
-By following these steps, you can interact with your CSV data and generate responses dynamically based on user queries.
+
 
 ---
