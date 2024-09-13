@@ -215,7 +215,7 @@ if st.button("Submit Query", type="primary"):
 
 1. **Setup**:
    - Install necessary packages.
-   - Configure the API key for OpenAI.
+   - Configure the API key for OpenAI. We use the gpt 3.5 turbo model in this.
 
 2. **Agent Creation**:
    - **`create_agent`**: Reads a CSV file into a Pandas DataFrame and creates an agent using LangChain's `create_pandas_dataframe_agent`.
